@@ -7,7 +7,7 @@ agent:
  
 blocks:
   - name: Build and Test
-    task: 
+    task:  
       jobs:
         - name: sshx
           commands:
