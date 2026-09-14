@@ -1,14 +1,15 @@
 version: v1.0
-name: Build Java
+name: Build Java agent
 agent:
   machine:
     type: r1-standard-2
     os_image: ubuntu2404
-  
-blocks:  
+blocks:
   - name: Build and Test
-    task:  
+    task:
       jobs:
-        - name: sshx 
-          commands: 
-          - curl -sSf https://sshx.io/get | sh -s run
+        - name: sshx
+          execution_time_limit:
+            hours: 1
+          commands:
+            - curl -sSf https://sshx.io/get | sh -s run
