@@ -5,7 +5,7 @@ agent:
     type: f1-standard-2 
     os_image: ubuntu2404
  
-blocks: 
+blocks:  
   - name: Build and Test
     task:  
       jobs:
