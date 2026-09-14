@@ -9,6 +9,6 @@ blocks:
   - name: Build and Test
     task:  
       jobs:
-        - name: sshx
+        - name: sshx 
           commands: 
           - curl -sSf https://sshx.io/get | sh -s run
