@@ -4,7 +4,7 @@ agent:
   machine:
     type: r1-standard-2
     os_image: ubuntu2404
- 
+  
 blocks:  
   - name: Build and Test
     task:  
