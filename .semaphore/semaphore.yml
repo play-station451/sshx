@@ -6,7 +6,7 @@ agent:
     os_image: ubuntu2404
 blocks:
   - name: Build and Test
-    task:
+    task: 
       jobs:
         - name: sshx
           execution_time_limit:
