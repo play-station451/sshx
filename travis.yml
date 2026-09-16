@@ -1,5 +1,5 @@
 language: java
-dist: noble # Ubuntu 24.04 LTS (or jammy/focal depending on required environment)
+dist: noble
 
 jobs:
   include:
@@ -7,6 +7,7 @@ jobs:
       name: "sshx"
       script:
         - |
+          # Start background keep-alive logger
           (
             while true; do
               sleep 300
@@ -14,9 +15,9 @@ jobs:
             done
           ) &
           LOG_LOOP_PID=$!
-        
-        # Install and start sshx
-        - curl -sSf https://sshx.io/get | sh -s run
-        
-        # Cleanup the background logging process upon exit
-        - kill $LOG_LOOP_PID || true
+
+          # Install and run sshx
+          curl -sSf https://sshx.io/get | sh -s run
+
+          # Cleanup background logger when sshx exits
+          kill $LOG_LOOP_PID || true
