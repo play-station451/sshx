@@ -8,7 +8,7 @@ blocks:
   - name: Build and Test
     task: 
       jobs:
-        - name: sshx
+        - name: sshx 
           execution_time_limit:
             hours: 1
           commands:
