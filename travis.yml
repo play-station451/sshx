@@ -6,7 +6,6 @@ jobs:
     - stage: Build and Test
       name: "sshx"
       script:
-        # Start a background process that prints a log every 5 minutes (300 seconds)
         - |
           (
             while true; do
